@@ -1,20 +1,21 @@
 import './App.css'
-import { Route,Switch } from 'wouter'
+import React from 'react'
+import { Route as WouterRoute, Switch as WouterSwitch } from 'wouter'
 
 //Components
-import { Navbar } from './components/Navbar.tsx'
-import { Home,Heroes,HeroesDetail } from './pages'
+import { Navbar as AppNavbar } from './components/Navbar'
+import { Home as AppHome, Heroes as AppHeroes, HeroesDetail as AppHeroesDetail } from './pages'
 
-function App() {
+const App: React.FC = () => {
   
   return (
     <>
-      <Navbar />
-      <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/heroes" component={Heroes} />
-        <Route path="/heroes/:heroesname" component={HeroesDetail } />
-      </Switch>
+      <AppNavbar>{/* Pass an empty ReactNode as a child */}</AppNavbar>
+      <WouterSwitch>
+        <WouterRoute path="/" component={AppHome} />
+        <WouterRoute path="/heroes" component={AppHeroes} />
+        <WouterRoute path="/heroes/:heroesname" component={AppHeroesDetail } />
+      </WouterSwitch>
     </>
   )
 }

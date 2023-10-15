@@ -2,6 +2,7 @@ import { useHeroes } from "../hooks/useHeroes";
 import { HeroesItem } from "./HeroesItem";
 
 
+
 export const HeroesList = () => {
     const { loading, heroes } = useHeroes();
 

@@ -1,7 +1,10 @@
-import { useState, FC } from "react";
+import { useState, FC, ReactNode  } from "react";
 import { Link } from "wouter";
 
-export const Navbar: FC = ({ children }) => {
+interface NavbarProps {
+  children: ReactNode
+}
+export const Navbar: FC <NavbarProps> = ({ children }) => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
   return (

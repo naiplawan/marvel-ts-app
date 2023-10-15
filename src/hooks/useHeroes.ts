@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Heroes } from '../interface'
+import { Heroes } from '../interfaces'
 import data from '../data/heroes.json'
 
 export const useHeroes = () => {

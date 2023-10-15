@@ -3,11 +3,11 @@ import { useLocation } from 'wouter'
 import { Heroes } from '../interfaces'
 
 interface HeroesItemProps {
-    heroesProps: Heroes
-}
+    heroes: Heroes
+  }
 
 export const HeroesItem: FC<HeroesItemProps> = ({ heroes }) => {
-    const { hero, img } = heroes
+    const { hero, img } =  heroes
     const [, setLocation] = useLocation()
 
     const containerClass = 'flex items-center gap-3 bg-blue-700 w-40 rounded-md hover:bg-blue-800 cursor-pointer p-3 transition ease-in-out delay-150 hover:translate-y-1 hover:scale-110 duration-300'
@@ -24,3 +24,4 @@ export const HeroesItem: FC<HeroesItemProps> = ({ heroes }) => {
         </div>
     )
 }
+
